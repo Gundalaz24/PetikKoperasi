@@ -1,0 +1,63 @@
+@font-face{
+	font-family: 'bellerosefont';
+	src: url('../fonts/Bellerose.ttf') format('truetype');
+}
+
+body {
+	background-color: #4E7FA4;
+	padding-top: 40px; 
+}
+.logohome {
+	width: 600px;
+	height: auto;
+	margin-top: 70px;
+	margin-left: 100px;
+}
+.laptop {
+	width: 600px;
+	height: auto;
+	margin-top: 30px;
+	margin-left: 10px;
+}
+.des{
+	color: white;
+	margin-left: 100px;
+	margin-top: -150px;
+	font-size: 22px;
+	font-family: bellerose;
+}
+.inputcon{
+	width: 200px;
+	height: auto;
+	margin-top: 70px;
+	margin-left: 100px;
+}
+.historycon{
+	width: 200px;
+	height: auto;
+	margin-top: 70px;
+}
+.footers{
+	background-color: #304249;
+	width: 60%;
+	color: white;
+	border-radius: 10px;
+	margin-top: 70px;
+	margin-left: 120px;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.footers i{
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 25px;
+    text-align: center;
+}
+.footers p{
+	position: absolute;
+	display: inline-block;
+    vertical-align: top;	
+    margin-left: 15px; 
+}
