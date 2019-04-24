@@ -1,2 +1,2 @@
-# petikKoperasi
-aplikasi berbasis web kelompok 1
+# Aplikasi Koperasi Petik Kelopmpok 1
+Repository untuk Code Igneter koperasi
