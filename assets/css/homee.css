@@ -69,9 +69,6 @@ body {
 
 /*responsive max*/
 
-@media screen and (max-width: 3000px){
-/* CSS styles */
-}
 @media screen and (max-width: 1300px){
 body {
 	margin-left: -50px; 

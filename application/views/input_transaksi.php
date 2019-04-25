@@ -3,12 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Koperasi PeTIK</title>
 	<!-- css link -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/css/homee.css")?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/css/input_transaksi.css")?>">
 	<!-- icon -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- js link -->
@@ -19,8 +18,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="shortcut icon" href="<?php echo base_url("uploads/image/title.jpg")?>">
 </head>
 <body>
+	<!-- NAV -->
+<div class="headerLogo">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="col-12-fluid">
+    	
+    	<img class="logoo" src="<?php echo base_url("uploads/image/Logo.png")?>">
+    	</div>
+    </div>
+  </div>
+</nav>
 
+<!-- sidebar -->
+<div id="mySidenav" class="sidenav">
+  <h3 >Menu</h3>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
 
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 
 </body>
 </html>

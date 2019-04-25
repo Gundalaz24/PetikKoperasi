@@ -1,0 +1,73 @@
+/*font*/
+@font-face{
+	font-family: 'bellerose';
+	src: url('../fonts/Bellerose.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'opera';
+	src: url('../fonts/Opera-Demo.otf') format('truetype');
+}
+
+*{
+	box-sizing: border-box;
+}
+body{
+
+}
+.headerLogo{
+	background-color: #4E7FA4;
+	vertical-align: middle;
+	display: inline-block;
+}
+.logoo{
+	max-width: 20%;
+	max-height: auto;
+	padding: 10px;
+}
+
+/*sidebar*/
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  background-color: #304249;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 45px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: tomato;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+/*  margin-top: 17px;*/
+  top: 0;
+  right: 25px;
+  font-size: 80px;
+  margin-left: 50px;
+  font-family: opera;
+}
+
+h3{
+	margin-top: -50;
+	font-family: opera;
+	padding-left: 33px;
+	font-size: 40px;
+	color: white;
+
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
