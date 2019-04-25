@@ -66,9 +66,144 @@ body {
     margin-left: 15px; 
 }
 
-/*Responsive max*/
-@media screen and (max-width: 992px)and (min-width: 600px) {
-  body {
+
+/*responsive max*/
+
+@media screen and (max-width: 3000px){
+/* CSS styles */
+}
+@media screen and (max-width: 1300px){
+body {
+	margin-left: -50px; 
+	margin-top: 10px;
+}
+.logohome {
+	max-width: 95%;
+	height: auto;
+	margin-top: 70px;
+	float: left;
+	display: flex;
+}
+.laptop {
+	max-width: 85%;
+	height: auto;
+	float: right;
+	display: flex;
+	margin-top: 50px;
+}
+.des{
+	width: 95%;
+	color: white;
+	margin-top: -80px;
+	font-size: 20px;
+	font-family: bellerose;
+}
+.inputcon{
+	width: 180px;
+	height: auto;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+.historycon{
+	width: 180px;
+	height: auto;
+	margin-top: 20px;
+	margin-left: 40px;
+}
+.footers{
+	background-color: #304249;
+	width: 70%;
+	line-height: 21px;
+	color: white;
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-left: 140px;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	vertical-align: top;
+}
+.footers i{
+    vertical-align: middle;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 15px;
+    text-align: center;
+}
+.footers p{
+	position: absolute;
+	display: inline-block;
+    vertical-align: middle;	
+    margin-left: 10px; 
+}
+}
+@media screen and (max-width: 1024px){
+body {
+	margin-left: -50px; 
+	margin-top: 10px;
+}
+.logohome {
+	max-width: 95%;
+	height: auto;
+	margin-top: 70px;
+	float: left;
+	display: flex;
+}
+.laptop {
+	max-width: 85%;
+	height: auto;
+	float: right;
+	display: flex;
+	margin-top: 50px;
+}
+.des{
+	width: 95%;
+	color: white;
+	margin-top: -80px;
+	font-size: 20px;
+	font-family: bellerose;
+}
+.inputcon{
+	width: 180px;
+	height: auto;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+.historycon{
+	width: 180px;
+	height: auto;
+	margin-top: 20px;
+	margin-left: 40px;
+}
+.footers{
+	background-color: #304249;
+	width: 70%;
+	line-height: 21px;
+	color: white;
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-left: 140px;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	vertical-align: top;
+}
+.footers i{
+    vertical-align: middle;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 15px;
+    text-align: center;
+}
+.footers p{
+	position: absolute;
+	display: inline-block;
+    vertical-align: middle;	
+    margin-left: 10px; 
+}
+	}
+@media screen and (max-width: 992px){
+body {
 	margin-left: -50px; 
 	margin-top: -40px;
 }
@@ -131,11 +266,139 @@ body {
     vertical-align: middle;	
     margin-left: 10px; 
 }
-
-  }
-
-/* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
+	}
+@media screen and (max-width:880px){
+body {
+	margin-left: -50px; 
+	margin-top: -40px;
+}
+.logohome {
+	max-width: 81%;
+	height: auto;
+	margin-top: 70px;
+	float: left;
+	display: flex;
+}
+.laptop {
+	max-width: 40%;
+	height: auto;
+	float: right;
+	display: flex;
+	margin-left: 250px;
+}
+.des{
+	width: 100%;
+	color: white;
+	margin-top: -200px;
+	font-size: 22px;
+	font-family: bellerose;
+}
+.inputcon{
+	width: 180px;
+	height: auto;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+.historycon{
+	width: 180px;
+	height: auto;
+	margin-top: 20px;
+	margin-left: 40px;
+}
+.footers{
+	background-color: #304249;
+	width: 70%;
+	line-height: 21px;
+	color: white;
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-left: 140px;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	vertical-align: top;
+}
+.footers i{
+    vertical-align: middle;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 15px;
+    text-align: center;
+}
+.footers p{
+	position: absolute;
+	display: inline-block;
+    vertical-align: middle;	
+    margin-left: 10px; 
+}
+	}
+@media screen and (max-width:768px){
+body {
+	margin-left: -50px; 
+	margin-top: -10px;
+}
+.logohome {
+	max-width: 81%;
+	height: auto;
+	margin-top: 70px;
+	float: left;
+	display: flex;
+}
+.laptop {
+	max-width: 40%;
+	height: auto;
+	float: right;
+	display: flex;
+	margin-left: 250px;
+}
+.des{
+	width: 40%;
+	color: white;
+	margin-top: -200px;
+	font-size: 20px;
+	font-family: bellerose;
+}
+.inputcon{
+	width: 150px;
+	height: auto;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+.historycon{
+	width: 150px;
+	height: auto;
+	margin-top: -186px;
+	margin-left: 290px;
+}
+.footers{
+	background-color: #304249;
+	width: 35%;
+	line-height: 15px;
+	color: white;
+	border-radius: 10px;
+	margin-top: -182px;
+	margin-left: 480px;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	vertical-align: top;
+}
+.footers i{
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 15px;
+    text-align: center;
+}
+.footers p{
+	position: absolute;
+	display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;	
+    margin-left: 10px; 
+}
+	}
+@media screen and (max-width:700px){
 body{
 	margin-left: -50px; 
 	margin-top: -40px;
@@ -197,7 +460,130 @@ body{
     vertical-align: middle;	
     margin-left: 15px; 
 }
-
-
-/*responsive min*/
-/* On screens that are 600px or less, set the background color to olive 
+}
+@media screen and (max-width:600px){
+body{
+	margin-left: -50px; 
+	margin-top: -40px;
+}
+.logohome {
+	max-width: 81%;
+	height: auto;
+	margin-top: 70px;
+	float: left;
+	display: flex;
+}
+.laptop {
+	max-width: 40%;
+	height: auto;
+	float: right;
+	display: flex;
+	margin-left: 250px;
+}
+.des{
+	max-width: 40%;
+	color: white;
+	margin-top: -120px;
+	font-size: 15px;
+	font-family: bellerose;
+}
+.inputcon{
+	width: 150px;
+	height: auto;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+.historycon{
+	width: 150px;
+	height: auto;
+	margin-top: -167px;
+	margin-left: 400px;
+}
+.footers{
+	background-color: #304249;
+	width: 82%;
+	color: white;
+	border-radius: 10px;
+	margin-top: 30px;
+	margin-left: 100px;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.footers i{
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 25px;
+    text-align: center;
+}
+.footers p{
+	position: absolute;
+	display: inline-block;
+    vertical-align: middle;	
+    margin-left: 15px; 
+}
+}
+@media screen and (max-width:480px){
+body{
+	margin-left: -50px; 
+	margin-top: -40px;
+}
+.logohome {
+	max-width: 81%;
+	height: auto;
+	margin-top: 70px;
+	float: left;
+	display: flex;
+}
+.laptop {
+	max-width: 40%;
+	height: auto;
+	float: right;
+	display: flex;
+	margin-left: 250px;
+}
+.des{
+	max-width: 40%;
+	color: white;
+	margin-top: -120px;
+	font-size: 15px;
+	font-family: bellerose;
+}
+.inputcon{
+	width: 150px;
+	height: auto;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+.historycon{
+	width: 150px;
+	height: auto;
+	margin-top: -167px;
+	margin-left: 400px;
+}
+.footers{
+	background-color: #304249;
+	width: 82%;
+	color: white;
+	border-radius: 10px;
+	margin-top: 30px;
+	margin-left: 100px;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.footers i{
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 25px;
+    text-align: center;
+}
+.footers p{
+	position: absolute;
+	display: inline-block;
+    vertical-align: middle;	
+    margin-left: 15px; 
+}
+}
