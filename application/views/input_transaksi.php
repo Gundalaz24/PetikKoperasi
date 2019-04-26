@@ -24,23 +24,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="container-fluid">
     <div class="col-12-fluid">
     	
-    	<img class="logoo" src="<?php echo base_url("uploads/image/Logo.png")?>">
+    	<a href="<?php echo base_url("")?>koperasi_petik"><img class="logoo" src="<?php echo base_url("uploads/image/Logo.png")?>"></a>
     	</div>
     </div>
   </div>
 </nav>
 
+
+<div class="container-fluid">
+	<div class="row row-no-gutters">
+		<div class="col-md-2">
 <!-- sidebar -->
 <div id="mySidenav" class="sidenav">
-  <h3 >Menu</h3>
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+	<ul type="bullet">
+  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<li><a href="#">TRANSAKSI</a></li>
+	<li><a href="#">KETERANGAN INVESTASI</a></li>
+	<li><a href="#">KETERANGAN PINJAMAN</a></li>
+	<li><a href="#">BELANJA</a></li>
+  </ul>
 </div>
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<span class="openbtn" onclick="openNav()">&#9776;</span>
 
 <script>
 function openNav() {
@@ -51,6 +56,54 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 </script>
+</div>
+<!-- content -->
+
+<div class="col-md-10">
+<form>
+<h1>INPUT TRANSAKSI</h1>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Nama</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option></option>
+      <option></option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Barang</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option></option>
+      <option></option>
+    </select>
+  </div>
+
+     
+  <div class="form-group">
+  	<label class="control-label" for="date">Tanggal Transaksi</label>
+      <input type="date" name="tgl" id="tgl" class="form-control"
+      placeholder="yyyy-mm-dd">
+  </div>
+     
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Jumlah</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+  </div>
+   <div class="form-group">
+    <label for="exampleFormControlInput1">Total Harga</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+  </div>
+
+  <div class="form-group"> 
+        <button class="btn" name="submit" type="submit">Submit</button>
+      </div>
+     </form>
+</form>
+</div>
+	
+	</div>
+</div>
+
+
 
 </body>
 </html>

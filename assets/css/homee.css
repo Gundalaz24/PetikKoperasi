@@ -41,6 +41,12 @@ body {
 	height: auto;
 	margin-top: 70px;
 }
+.inputcon:hover{
+	transform: scale(1.1);
+}
+.historycon:hover{
+	transform: scale(1.1);
+}
 .footers{
 	background-color: #304249;
 	width: 60%;
@@ -107,6 +113,12 @@ body {
 	margin-top: 20px;
 	margin-left: 40px;
 }
+.inputcon:hover{
+	transform: scale(1.1);
+}
+.historycon:hover{
+	transform: scale(1.1);
+}
 .footers{
 	background-color: #304249;
 	width: 70%;
@@ -171,6 +183,12 @@ body {
 	height: auto;
 	margin-top: 20px;
 	margin-left: 40px;
+}
+.inputcon:hover{
+	transform: scale(1.1);
+}
+.historycon:hover{
+	transform: scale(1.1);
 }
 .footers{
 	background-color: #304249;
@@ -237,6 +255,12 @@ body {
 	margin-top: 20px;
 	margin-left: 40px;
 }
+.inputcon:hover{
+	transform: scale(1.1);
+}
+.historycon:hover{
+	transform: scale(1.1);
+}
 .footers{
 	background-color: #304249;
 	width: 70%;
@@ -302,6 +326,12 @@ body {
 	margin-top: 20px;
 	margin-left: 40px;
 }
+.inputcon:hover{
+	transform: scale(1.1);
+}
+.historycon:hover{
+	transform: scale(1.1);
+}
 .footers{
 	background-color: #304249;
 	width: 70%;
@@ -366,6 +396,12 @@ body {
 	height: auto;
 	margin-top: -186px;
 	margin-left: 290px;
+}
+.inputcon:hover{
+	transform: scale(1.1);
+}
+.historycon:hover{
+	transform: scale(1.1);
 }
 .footers{
 	background-color: #304249;
@@ -433,6 +469,12 @@ body{
 	margin-top: -167px;
 	margin-left: 400px;
 }
+.inputcon:hover{
+	transform: scale(1.1);
+}
+.historycon:hover{
+	transform: scale(1.1);
+}
 .footers{
 	background-color: #304249;
 	width: 82%;
@@ -496,6 +538,12 @@ body{
 	margin-top: -167px;
 	margin-left: 400px;
 }
+.inputcon:hover{
+	transform: scale(1.1);
+}
+.historycon:hover{
+	transform: scale(1.1);
+}
 .footers{
 	background-color: #304249;
 	width: 82%;
@@ -558,6 +606,12 @@ body{
 	height: auto;
 	margin-top: -167px;
 	margin-left: 400px;
+}
+.inputcon:hover{
+	transform: scale(1.1);
+}
+.historycon:hover{
+	transform: scale(1.1);
 }
 .footers{
 	background-color: #304249;
