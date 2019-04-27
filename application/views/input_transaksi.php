@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Koperasi PeTIK</title>
-	<!-- css link -->
+	<!-- boostrap link -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/css/input_transaksi.css")?>">
 	<!-- icon -->
@@ -37,29 +37,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- sidebar -->
 <div id="mySidenav" class="sidenav">
 	<ul type="bullet">
-  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	<li><a href="#">TRANSAKSI</a></li>
-	<li><a href="#">KETERANGAN INVESTASI</a></li>
-	<li><a href="#">KETERANGAN PINJAMAN</a></li>
-	<li><a href="#">BELANJA</a></li>
+	<li class="active"><a href="<?php base_url()?>input_tran">TRANSAKSI</a></li>
+	<li><a href="">KETERANGAN INVESTASI</a></li>
+	<li><a href="">KETERANGAN PINJAMAN</a></li>
+	<li><a href="">BELANJA</a></li>
   </ul>
 </div>
 
-<span class="openbtn" onclick="openNav()">&#9776;</span>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
 </div>
 <!-- content -->
 
-<div class="col-md-10">
 <form>
 <h1>INPUT TRANSAKSI</h1>
   <div class="form-group">
@@ -75,15 +62,12 @@ function closeNav() {
       <option></option>
       <option></option>
     </select>
-  </div>
-
-     
+  </div>     
   <div class="form-group">
   	<label class="control-label" for="date">Tanggal Transaksi</label>
       <input type="date" name="tgl" id="tgl" class="form-control"
       placeholder="yyyy-mm-dd">
-  </div>
-     
+  </div>   
   <div class="form-group">
     <label for="exampleFormControlInput1">Jumlah</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
@@ -92,13 +76,10 @@ function closeNav() {
     <label for="exampleFormControlInput1">Total Harga</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
   </div>
-
   <div class="form-group"> 
-        <button class="btn" name="submit" type="submit">Submit</button>
-      </div>
-     </form>
+        <button class="btn" name="submit" type="submit">Input</button>
+   </div>
 </form>
-</div>
 	
 	</div>
 </div>
