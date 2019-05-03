@@ -37,7 +37,8 @@
   font-family: opera;
   color: white;
   display: block;
-  transition: 0.3s; 
+  transition: 0.3s;
+  text-decoration: none; 
 }
 
 .sidenav a:hover {

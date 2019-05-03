@@ -535,8 +535,8 @@ body{
 .historycon{
 	width: 150px;
 	height: auto;
-	margin-top: -167px;
-	margin-left: 400px;
+	margin-top: -190px;
+	margin-left: 300px;
 }
 .inputcon:hover{
 	transform: scale(1.1);
@@ -596,16 +596,16 @@ body{
 	font-family: bellerose;
 }
 .inputcon{
-	width: 150px;
+	width: 130px;
 	height: auto;
 	margin-top: 20px;
 	margin-left: 100px;
 }
 .historycon{
-	width: 150px;
+	width: 130px;
 	height: auto;
-	margin-top: -167px;
-	margin-left: 400px;
+	margin-top: -165px;
+	margin-left: 300px;
 }
 .inputcon:hover{
 	transform: scale(1.1);
@@ -615,7 +615,7 @@ body{
 }
 .footers{
 	background-color: #304249;
-	width: 82%;
+	width: 75%;
 	color: white;
 	border-radius: 10px;
 	margin-top: 30px;

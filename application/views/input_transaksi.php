@@ -40,41 +40,68 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<li class="active"><a href="<?php base_url()?>input_tran">TRANSAKSI</a></li>
 	<li><a href="">KETERANGAN INVESTASI</a></li>
 	<li><a href="">KETERANGAN PINJAMAN</a></li>
-	<li><a href="">BELANJA</a></li>
+	<li><a href="<?php base_url()?>input_bel">BELANJA</a></li>
   </ul>
 </div>
 
 </div>
 <!-- content -->
 
-<form>
+<form method="POST" action="">
 <h1>INPUT TRANSAKSI</h1>
+<?php if (validation_errors() ) : ?>
+  <div class="alert alert-danger" role="alert">
+ <?php echo validation_errors() ?>
+</div>
+<?php endif; ?>
+
+<?php if($this->session->flashdata('flash') ) : ?>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+  Data Belanja <strong>Berhasil</strong> 
+  <?php echo $this->session->flashdata('flash');?>.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  </div>
+<?php endif; ?>
+
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Nama</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option></option>
-      <option></option>
+    <label for="exampleFormControlSelect1">Nama Anggota</label>
+    <select class="form-control" name="anggota">
+      <option disabled selected>pilih anggota</option>
+      <?php foreach($data_anggota->result_array() as $value) { 
+      echo '<option value="'.$value['id_anggota'].'">'.$value['nama_anggota'].'</option>'
+      ;} ?>
     </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Barang</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option></option>
-      <option></option>
+    <label>Barang</label>
+    <select class="form-control" name="barang">
+      <option disabled selected>pilih barang</option>
+      <?php foreach($data_barang->result_array() as $value) { 
+      echo '<option value="'.$value['id_barang'].'">'.$value['nama_barang'].'</option>'
+      ;} ?> ?>
     </select>
   </div>     
   <div class="form-group">
   	<label class="control-label" for="date">Tanggal Transaksi</label>
-      <input type="date" name="tgl" id="tgl" class="form-control"
+      <input type="date" name="tgl" class="form-control"
       placeholder="yyyy-mm-dd">
   </div>   
   <div class="form-group">
     <label for="exampleFormControlInput1">Jumlah</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+    <input type="text" class="form-control" name="jumlah">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Harga Satuan</label>
+    <input type="text" class="form-control" name="harga_satuan" readonly
+    value="<?php 
+        echo $join[0]->harga_barang;
+    ?>">
   </div>
    <div class="form-group">
     <label for="exampleFormControlInput1">Total Harga</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+    <input type="text" class="form-control" name="total_harga">
   </div>
   <div class="form-group"> 
         <button class="btn" name="submit" type="submit">Input</button>
