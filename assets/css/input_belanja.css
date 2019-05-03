@@ -1,0 +1,107 @@
+/*font*/
+@font-face{
+	font-family: 'bellerose';
+	src: url('../fonts/Bellerose.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'opera';
+	src: url('../fonts/Opera-Demo.otf') format('truetype');
+}
+
+*{
+	box-sizing: border-box;
+}
+.headerLogo{
+	background-color: #4E7FA4;
+	vertical-align: middle;
+	display: inline-block;
+}
+.logoo{
+	max-width: 20%;
+	max-height: auto;
+	padding: 10px;
+	margin-left: 40px;
+}
+
+/*sidebar*/
+.sidenav {
+  height:141.5%;
+  width: 250px;
+  background-color: #304249;
+  padding-top: 50px;
+}
+
+.sidenav a {
+  padding: 3px 8px 8px 22px;
+  font-size: 25px;
+  font-family: opera;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  text-decoration: none; 
+}
+
+.sidenav a:hover {
+  color: tomato;
+}
+li{
+	color: white;
+	font-size: 20px;
+	margin-left: 10px;
+}
+li:hover{
+	color: tomato;
+}
+.active{
+	color: tomato;
+}
+.active a{
+	color: tomato;
+}
+.col-md-2{
+	margin-left: -15px;
+}
+
+/*form*/
+form{
+	max-height: 100%;
+	width: 50%;
+	margin-top: 40px;
+	margin-left: 60px;
+}
+h1{
+	font-family: opera;
+	color: #304249;
+}
+.form-control{
+	border-color:#304249;
+	border-width: 2px;
+}
+.btn{
+	background-color: #304249;
+	color: white;
+}
+.btn:hover{color: tomato;}
+
+/*responsive*/
+@media screen and (max-width: 1300px){
+	form{margin-left: 170px;}
+	.logoo{max-width: 30%; min-width: 30%;}	
+}
+@media screen and (max-width: 1024px){
+	form{margin-left: 200px;}
+	.logoo{max-width: 40%; min-width: 40%;}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  .logoo{max-width: 40%; min-width: 40%;}
+  .sidenav a {font-size: 20px;margin-left: -15px;}
+  h1{font-size: 40px;}
+  form{margin-left: 200px;margin-top: 40px;}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .logoo{max-width: 60%;}
+  .sidenav {position:fixed;height: 1540%;width: 190px;}
+  .sidenav a {font-size: 20px;margin-left: -15px;}
+  h1{font-size: 40px;}
+  form{margin-left: 220px;margin-top: 40px;}
+}
