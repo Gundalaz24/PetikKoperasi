@@ -38,8 +38,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="mySidenav" class="sidenav">
 	<ul type="bullet">
 	<li class="active"><a href="<?php base_url()?>input_tran">TRANSAKSI</a></li>
-	<li><a href="">KETERANGAN INVESTASI</a></li>
-	<li><a href="">KETERANGAN PINJAMAN</a></li>
+	<li><a href="<?php base_url()?>input_sim">KETERANGAN INVESTASI</a></li>
+	<li><a href="<?php base_url()?>input_pin">KETERANGAN PINJAMAN</a></li>
 	<li><a href="<?php base_url()?>input_bel">BELANJA</a></li>
   </ul>
 </div>
@@ -67,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <div class="form-group">
     <label for="exampleFormControlSelect1">Nama Anggota</label>
-    <select class="form-control" name="anggota">
+    <select class="form-control" name="anggota" id="anggota">
       <option disabled selected>pilih anggota</option>
       <?php foreach($data_anggota->result_array() as $value) { 
       echo '<option value="'.$value['id_anggota'].'">'.$value['nama_anggota'].'</option>'
@@ -76,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
   <div class="form-group">
     <label>Barang</label>
-    <select class="form-control" name="barang">
+    <select class="form-control" name="barang" id="jenis_barang">
       <option disabled selected>pilih barang</option>
       <?php foreach($data_barang->result_array() as $value) { 
       echo '<option value="'.$value['id_barang'].'">'.$value['nama_barang'].'</option>'
@@ -90,18 +90,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>   
   <div class="form-group">
     <label for="exampleFormControlInput1">Jumlah</label>
-    <input type="text" class="form-control" name="jumlah">
-  </div>
+    <input type="text" class="form-control" name="jumlah" id="jumlah">
+    </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Harga Satuan</label>
-    <input type="text" class="form-control" name="harga_satuan" readonly
-    value="<?php 
-        echo $join[0]->harga_barang;
-    ?>">
+    <input type="text" class="form-control" name="harga_satuan" id="harga_satuan" value="" readonly>
   </div>
    <div class="form-group">
     <label for="exampleFormControlInput1">Total Harga</label>
-    <input type="text" class="form-control" name="total_harga">
+    <input type="text" class="form-control" name="total_harga" id="total_harga" value="" readonly>
   </div>
   <div class="form-group"> 
         <button class="btn" name="submit" type="submit">Input</button>
@@ -111,6 +108,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 </div>
 
+<script type="text/javascript"> 
+      // var string = "";
+      var result = <?php echo $data ?>;
+      // console.log(result);
+
+      var jenis_barang = document.getElementById("jenis_barang");
+      var harga_satuan = document.getElementById("harga_satuan");
+      var jumlah = document.getElementById("jumlah");
+      var total_harga = document.getElementById("total_harga");
+
+      // string += "<option> Pilih jenis barang </option>";
+
+      // for(value in result){
+      //   string += "<option>"+ result[value].nama_barang +"</option>";
+      // }
+      
+      // jenis_barang.innerHTML = string;
+      
+      jenis_barang.addEventListener('change', (event) => {
+        harga_satuan.value = result[jenis_barang].harga_satuan;
+      });
+
+      jumlah.addEventListener('change', (event) =>{
+        total_harga.value = jumlah.value * harga_satuan.value;
+      });
+        
+  </script> 
 
 
 </body>

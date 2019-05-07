@@ -38,8 +38,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="mySidenav" class="sidenav">
 	<ul type="bullet">
 	<li><a href="<?php base_url()?>input_tran">TRANSAKSI</a></li>
-	<li><a href="">KETERANGAN INVESTASI</a></li>
-	<li><a href="">KETERANGAN PINJAMAN</a></li>
+	<li><a href="<?php base_url()?>input_sim">KETERANGAN INVESTASI</a></li>
+	<li><a href="<?php base_url()?>input_pin">KETERANGAN PINJAMAN</a></li>
 	<li class="active"><a href="<?php base_url()?>input_bel">BELANJA</a></li>
   </ul>
 </div>

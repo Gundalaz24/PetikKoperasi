@@ -45,7 +45,13 @@ class input_tran extends CI_Controller {
                 'jumlah' => $jumlah,
                 'harga_satuan' => $harga,
 				'total_harga' => $total
-                ];
+				];
+				
+				$stok = $query->stok_barang;
+				$total_stok = $stok + $this->input->post("jumlah", true);
+		
+				$stok = $total_stok;
+				$id = $query->id_barang;
 
 			$this->Input_tran_model->tambahData($data);
 			$this->session->set_flashdata('flash', 'ditambahkan');
@@ -55,6 +61,5 @@ class input_tran extends CI_Controller {
 			$this->load->view('input_transaksi', $data);
 		}
 	}
-
 }
 

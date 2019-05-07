@@ -40,8 +40,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<li><a href="<?php base_url()?>produk">PRODUK</a></li>
   <li class="active"><a href="<?php base_url()?>history_tran">TRANSAKSI</a></li>
   <li><a href="<?php base_url()?>anggota">ANGGOTA</a></li>
-	<li><a href="#">KETERANGAN INVESTASI</a></li>
-	<li><a href="#">KETERANGAN PINJAMAN</a></li>
+	<li><a href="<?php base_url()?>history_sim">KETERANGAN INVESTASI</a></li>
+	<li><a href="<?php base_url()?>history_pin">KETERANGAN PINJAMAN</a></li>
 	<li><a href="<?php base_url()?>history_bel">BELANJA</a></li>
   </ul>
 </div>

@@ -21,6 +21,7 @@ class Input_tran_model extends CI_Model {
                 return $query->result();
         }
 
+
         public function tambahData($data){
                 $this->db->insert('daftar_kebutuhan', $data);
         }
