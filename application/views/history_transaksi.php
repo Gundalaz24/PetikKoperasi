@@ -58,26 +58,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <th scope="col">Anggota</th>
       <th scope="col">Produk</th>
       <th scope="col">Tanggal Transaksi</th>
+      <th scope="col">Harga Satuan</th>
       <th scope="col">Jumlah</th>
       <th scope="col">Total harga</th>
       <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
+  <?php $count = 1;?>
+    <?php foreach($data as $value){ ?>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
+      <th scope="row"><?php echo $count ?></th>
+      <td><?php echo $value->nama_anggota ?></td>
+      <td><?php echo $value->nama_barang ?></td>
+      <td><?php echo $value->tanggal ?></td>
+      <td><?php echo $value->harga_satuan ?></td>
+      <td><?php echo $value->jumlah ?></td>
+      <td><?php echo $value->total_harga ?></td>
       <td class="aksi">
-        <i class="fa fa-edit btn btn-info"></i>
-        <i class="fa fa-trash btn btn-danger" aria-hidden="true"></i>
+        <a href="#" class="fa fa-edit btn btn-info"></a>
+        <?php echo anchor('history_tran/hapus/'.$value->id_daftar_kebutuhan,'<i class="fa fa-trash btn btn-danger" aria-hidden="true"></i>'); ?>
       </td>
     </tr>
-    <tr>
-    </tr>
+    <?php $count++ ?>
+    <?php } ?>
   </tbody>
 </table>
 </form>

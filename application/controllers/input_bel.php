@@ -11,26 +11,22 @@ class input_bel extends CI_Controller {
 
 	public function index()
 	{
-		$data['data'] = $this->Input_bel_model->comot_data();
+		$data['data'] = json_encode($this->Input_bel_model->comot_data());
 
 	
 		// tambah data
-		$this->form_validation->set_rules('barang_id','Barang','required');
-		$this->form_validation->set_rules('jumlah','Jumlah','required|numeric');	
-		$this->form_validation->set_rules('tanggal','Tanggal Belanja','required');
+		$this->form_validation->set_rules('jenis_barang','Barang','required');
+		$this->form_validation->set_rules('jumlah_barang','Jumlah','required|numeric');	
 
 		if($this->form_validation->run() != false){
 				
-				$barang_id = $this->input->POST('barang_id', true);
-                $jumlah = $this->input->POST('jumlah', true);
-                // $total = $this->input->POST('total_belanja', true);
-                $tanggal = $this->input->POST('tanggal', true);
-
+				$query = $this->Input_bel_model->get_data_by_id($this->input->post("jenis_barang",true));
+            
                 $data = [
-                'barang_id' => $barang_id,
-                'jumlah' => $jumlah,
-                // 'total_belanja' => $total,
-                'tanggal_belanja' => $tanggal
+					'barang_id' => $query->id_barang,
+					'jumlah' => $this->input->post("jumlah_barang",true),
+					'tanggal' => date("Y/m/d"),
+					'total_belanja' => $this->input->post("total_belanja",true)
                 ];
 
 			$this->Input_bel_model->tambahData($data);

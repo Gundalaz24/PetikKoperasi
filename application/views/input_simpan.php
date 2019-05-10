@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- content -->
 
 <form method="POST" action="<?php base_url()?>input_sim">
-<h1>INPUT SIMPANAN</h1>
+<h1>INPUT INVESTASI</h1>
 <?php if (validation_errors() ) : ?>
   <div class="alert alert-danger" role="alert">
  <?php echo validation_errors() ?>
@@ -75,8 +75,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Jumlah</label>
-    <input type="text" class="form-control" name="jumlah">  
+    <label for="exampleFormControlInput1">Jumlah Investasi</label>
+    <input type="text" class="form-control" name="jumlah" placeholder="Rp. 0">  
   </div>
    <div class="form-group">
     <label class="control-label" for="date">Tanggal Belanja</label>

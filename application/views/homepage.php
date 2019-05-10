@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<a href="<?php base_url()?>input_tran"><img class="inputcon" src="<?php echo base_url("uploads/image/inputIcon.png")?>"></a>
 			</div>
 			<div class="col-md-2">
-				<a href="<?php base_url()?>history_tran"><img class="historycon" src="<?php echo base_url("uploads/image/historyIcon.png")?>"></a>
+				<a href="<?php base_url()?>anggota"><img class="historycon" src="<?php echo base_url("uploads/image/historyIcon.png")?>"></a>
 			</div>
 			<div class="col-md-6">
 				<div class="footers">

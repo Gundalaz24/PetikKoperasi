@@ -12,46 +12,32 @@ class input_tran extends CI_Controller {
 
 	public function index()
 	{
-		$data = array(
-			'data_anggota' => $this->Input_tran_model->data_anggota(),
-			'data_barang' => $this->Input_tran_model->data_barang(),
-			'join' => $this->Input_tran_model->join_data()
-		);
-
-	
+		$data = [
+		'data_anggota' => json_encode($this->Input_tran_model->data_anggota()),
+		'data_barang' =>  json_encode($this->Input_tran_model->data_barang())
+		];
+		
 		// tambah data
 		$this->form_validation->set_rules('anggota','Anggota','required');
-		$this->form_validation->set_rules('barang','Barang','required');
-		$this->form_validation->set_rules('tgl','Tanggal Belanja','required');
-		$this->form_validation->set_rules('jumlah','Jumlah','required|numeric');
-		$this->form_validation->set_rules('harga_satuan','Harga Satuan','required');
-		$this->form_validation->set_rules('total_harga','Total Harga','required|numeric');	
+		$this->form_validation->set_rules('jenis_barang','Barang','required');
+		$this->form_validation->set_rules('jumlah_barang','Jumlah','required|numeric');
+		$this->form_validation->set_rules('harga_barang','Harga Satuan','required');
+		$this->form_validation->set_rules('total_belanja','Total Harga','required|numeric');	
 		
 
 		if($this->form_validation->run() != false){
 				
-				$anggota = $this->input->POST('anggota', true);
-				$barang = $this->input->POST('barang', true);
-				$tanggal = $this->input->POST('tgl', true);
-                $jumlah = $this->input->POST('jumlah', true);
-                $harga = $this->input->POST('harga_satuan', true);
-                $total = $this->input->POST('total_harga', true);
-                
+				$querySatu = $this->Input_tran_model->get_anggota_by_id($this->input->post("anggota",true));
+				$queryDua = $this->Input_tran_model->get_data_by_id($this->input->post("jenis_barang",true));
 
                 $data = [
-                'anggota_id' => $anggota,
-                'barang_id' => $barang,
-                'tanggal_transaksi' => $tanggal,
-                'jumlah' => $jumlah,
-                'harga_satuan' => $harga,
-				'total_harga' => $total
+                'anggota_id' => $querySatu->id_anggota,
+                'barang_id' => $queryDua->id_barang,
+                'tanggal' => date("Y/m/d"),
+                'jumlah' => $this->input->post("jumlah_barang",true),
+                'harga_satuan' => $this->input->post("harga_barang",true),
+				'total_harga' => $this->input->post("total_belanja",true)
 				];
-				
-				$stok = $query->stok_barang;
-				$total_stok = $stok + $this->input->post("jumlah", true);
-		
-				$stok = $total_stok;
-				$id = $query->id_barang;
 
 			$this->Input_tran_model->tambahData($data);
 			$this->session->set_flashdata('flash', 'ditambahkan');

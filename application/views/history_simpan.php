@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- content -->
 <form>
-<h1>HISTORY SIMPANAN</h1>
+<h1>HISTORY INVESTASI</h1>
 <?php if($this->session->flashdata('flash') ) : ?>
   <div class="alert alert-success alert-dismissible fade show" role="alert">
   Data Belanja <strong>Berhasil</strong> 

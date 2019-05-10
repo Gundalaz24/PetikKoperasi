@@ -66,27 +66,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?php endif; ?>
 
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Jenis Barang</label>
-    <select class="form-control" name="barang_id">
-      <option  disabled selected>Pilih Barang</option>
-      <?php foreach($data as $value){ ?>
-      <option value="<?php echo $value->id_barang?>"><?php echo $value->nama_barang?></option>
-      <?php } ?>
-    </select>
+  <label for="jenis_barang">Jenis Barang</label>
+  <select class="form-control" name="jenis_barang" id="jenis_barang">
+  </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Jumlah</label>
-    <input type="text" class="form-control" name="jumlah">  
+  <label for="harga_barang">Harga</label>
+  <input type="text" class="form-control" name="harga_barang" id="harga_barang" readonly>
   </div>
-   <div class="form-group">
-    <label class="control-label" for="date">Tanggal Belanja</label>
-      <input type="date" name="tanggal" class="form-control"
-      placeholder="yyyy-mm-dd">
-  </div>   
   <div class="form-group">
-    <label for="exampleFormControlInput1">Total Belanja</label>
-    <input type="text" class="form-control" name="total_belanja" readonly
-    value="5000">
+  <label for="jumlah_barang">Jumlah</label>
+  <input type="text" class="form-control" name="jumlah_barang" id="jumlah_barang"  placeholder="masukan jumlah barang yang ingin dibeli">
+  </div>
+
+  <div class="form-group">
+  <label for="total_belanja">Total belanja</label>
+  <input type="text" class="form-control" name="total_belanja" id="total_belanja" readonly>
   </div>
   <div class="form-group"> 
       <button class="btn" name="tambah" type="submit">Input</button>
@@ -96,7 +91,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 </div>
 
+<script type="text/javascript"> 
+      var string = "";
+      var result = <?= $data ?>;
+      // console.log(result);
 
+      var jenis_barang = document.getElementById("jenis_barang");
+      var harga_barang = document.getElementById("harga_barang");
+      var jumlah_barang = document.getElementById("jumlah_barang");
+      var total_belanja = document.getElementById("total_belanja");
+
+      string += "<option> Pilih jenis barang </option>";
+
+      for(value in result){
+        string += "<option>"+ result[value].nama_barang +"</option>";
+      }
+      
+      jenis_barang.innerHTML = string;
+      
+      jenis_barang.addEventListener('change', (event) => {
+        harga_barang.value = result[jenis_barang.selectedIndex-1].harga_barang;
+      });
+
+      jumlah_barang.addEventListener('change', (event) =>{
+        total_belanja.value = jumlah_barang.value * harga_barang.value;
+      });
+        
+  </script>
 
 </body>
 </html>

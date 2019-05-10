@@ -75,8 +75,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Jumlah</label>
-    <input type="text" class="form-control" name="jumlah">  
+    <label for="exampleFormControlInput1">Jumlah Pinjaman</label>
+    <input type="text" class="form-control" name="jumlah" placeholder="Rp. 0">  
   </div>
    <div class="form-group">
     <label class="control-label" for="date">Tanggal Belanja</label>

@@ -78,9 +78,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <tr>
       <th scope="row"><?php echo $count ?></th>
       <td><?php echo $value->nama_barang ?></td>
-      <td><?php echo $value->tanggal_belanja ?></td>
+      <td><?php echo $value->tanggal ?></td>
       <td><?php echo $value->jumlah ?></td>
-      <td></td>
+      <td><?php echo $value->total_belanja ?></td>
       <td class="aksi">
         <a href="<?php echo base_url() ?>history_bel/edit" class="fa fa-edit btn btn-info"></a>
         <?php echo anchor('history_bel/hapus/'.$value->id_belanja,'<i class="fa fa-trash btn btn-danger" aria-hidden="true"></i>'); ?>

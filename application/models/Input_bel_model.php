@@ -4,10 +4,8 @@ class Input_bel_model extends CI_Model {
 
         public function comot_data()
         {
-                $query1 = $this->db->get('barang');
-                $query2 = $this->db->get('belanja');
-                return $query1->result();
-                return $query2->result();
+                $query = $this->db->get('barang');
+                return $query->result();
         }
 
         public function join_data()
@@ -18,6 +16,11 @@ class Input_bel_model extends CI_Model {
                 $query = $this->db->get();
                 return $query->result();
         }
+        public function get_data_by_id($data)
+		{
+		        $sql = "select * from barang where nama_barang = ? ";
+		        return $this->db->query($sql, $data)->row();
+		}
 
         public function tambahData($data){
                 $this->db->insert('belanja', $data);

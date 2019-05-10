@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="col-12-fluid">
-    	
+    
     	<a href="<?php echo base_url("")?>koperasi_petik"><img class="logoo" src="<?php echo base_url("uploads/image/Logo.png")?>"></a>
     	</div>
     </div>
@@ -68,37 +68,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="form-group">
     <label for="exampleFormControlSelect1">Nama Anggota</label>
     <select class="form-control" name="anggota" id="anggota">
-      <option disabled selected>pilih anggota</option>
-      <?php foreach($data_anggota->result_array() as $value) { 
-      echo '<option value="'.$value['id_anggota'].'">'.$value['nama_anggota'].'</option>'
-      ;} ?>
     </select>
   </div>
   <div class="form-group">
-    <label>Barang</label>
-    <select class="form-control" name="barang" id="jenis_barang">
-      <option disabled selected>pilih barang</option>
-      <?php foreach($data_barang->result_array() as $value) { 
-      echo '<option value="'.$value['id_barang'].'">'.$value['nama_barang'].'</option>'
-      ;} ?> ?>
-    </select>
-  </div>     
+  <label for="jenis_barang">Barang</label>
+  <select class="form-control" name="jenis_barang" id="jenis_barang">
+  </select>
+  </div>  
   <div class="form-group">
-  	<label class="control-label" for="date">Tanggal Transaksi</label>
-      <input type="date" name="tgl" class="form-control"
-      placeholder="yyyy-mm-dd">
-  </div>   
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Jumlah</label>
-    <input type="text" class="form-control" name="jumlah" id="jumlah">
-    </div>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Harga Satuan</label>
-    <input type="text" class="form-control" name="harga_satuan" id="harga_satuan" value="" readonly>
+  <label for="harga_barang">Harga</label>
+  <input type="text" class="form-control" name="harga_barang" id="harga_barang" readonly>
   </div>
-   <div class="form-group">
-    <label for="exampleFormControlInput1">Total Harga</label>
-    <input type="text" class="form-control" name="total_harga" id="total_harga" value="" readonly>
+  <div class="form-group">
+  <label for="jumlah_barang">Jumlah</label>
+  <input type="text" class="form-control" name="jumlah_barang" id="jumlah_barang"  placeholder="masukan jumlah barang yang ingin dibeli">
+  </div>
+
+  <div class="form-group">
+  <label for="total_belanja">Total belanja</label>
+  <input type="text" class="form-control" name="total_belanja" id="total_belanja" readonly>
   </div>
   <div class="form-group"> 
         <button class="btn" name="submit" type="submit">Input</button>
@@ -109,29 +97,53 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 
 <script type="text/javascript"> 
-      // var string = "";
-      var result = <?php echo $data ?>;
+      var string = "";
+      var result = <?php echo $data_anggota ?>;
       // console.log(result);
 
-      var jenis_barang = document.getElementById("jenis_barang");
-      var harga_satuan = document.getElementById("harga_satuan");
-      var jumlah = document.getElementById("jumlah");
-      var total_harga = document.getElementById("total_harga");
+      var anggota = document.getElementById("anggota");
 
-      // string += "<option> Pilih jenis barang </option>";
+      string += "<option disabled selected> Pilih Anggota </option>";
 
-      // for(value in result){
-      //   string += "<option>"+ result[value].nama_barang +"</option>";
-      // }
+      for(value in result){
+        string += "<option>"+ result[value].nama_anggota +"</option>";
+      }
       
-      // jenis_barang.innerHTML = string;
+      anggota.innerHTML = string;
+      
+      // jenis_barang.addEventListener('change', (event) => {
+      //   harga_barang.value = result[jenis_barang.selectedIndex-1].harga_barang;
+      // });
+
+      // jumlah_barang.addEventListener('change', (event) =>{
+      //   total_belanja.value = jumlah_barang.value * harga_barang.value;
+      // });
+        
+  </script> 
+<script type="text/javascript"> 
+      var string = "";
+      var result = <?php echo $data_barang ?>;
+      // console.log(result);
+        
+      var jenis_barang = document.getElementById("jenis_barang");
+      var harga_barang = document.getElementById("harga_barang");
+      var jumlah_barang = document.getElementById("jumlah_barang");
+      var total_belanja = document.getElementById("total_belanja");
+
+      string += "<option disabled selected> Pilih Barang </option>";
+
+      for(value in result){
+        string += "<option>"+ result[value].nama_barang +"</option>";
+      }
+      
+      jenis_barang.innerHTML = string;
       
       jenis_barang.addEventListener('change', (event) => {
-        harga_satuan.value = result[jenis_barang].harga_satuan;
+        harga_barang.value = result[jenis_barang.selectedIndex-1].harga_barang;
       });
 
-      jumlah.addEventListener('change', (event) =>{
-        total_harga.value = jumlah.value * harga_satuan.value;
+      jumlah_barang.addEventListener('change', (event) =>{
+        total_belanja.value = jumlah_barang.value * harga_barang.value;
       });
         
   </script> 
