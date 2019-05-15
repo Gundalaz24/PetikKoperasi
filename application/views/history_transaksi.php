@@ -14,7 +14,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<!-- title -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- title -->
 	<link rel="shortcut icon" href="<?php echo base_url("uploads/image/title.jpg")?>">
 </head>
 <body>
@@ -49,8 +50,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 
 <!-- content -->
-<form>
+<form action="" method="POST">
 <h1>HISTORY TRANSAKSI</h1>
+<?php if($this->session->flashdata('flash') ) : ?>
+  <div class="alert alert-info alert-dismissible fade show" role="alert">
+  Data Transaksi <strong>Berhasil</strong> 
+  <?php echo $this->session->flashdata('flash');?>.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  </div>
+  <?php endif; ?>
+
+  <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Cari Data Transaksi Berdasarkan Anggota atau Produk atau Harga Satuan" name="keyword">
+  <div class="input-group-append">
+    <button class="btn btn" type="submit">Cari</button>
+  </div>
+</div>
+
   <table class="table table-hover">
   <thead>
     <tr class="headtab">
@@ -76,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <td><?php echo $value->jumlah ?></td>
       <td><?php echo $value->total_harga ?></td>
       <td class="aksi">
-        <a href="#" class="fa fa-edit btn btn-info"></a>
+        <a href="<?= base_url()?>history_tran/ubah/<?= $value->id_daftar_kebutuhan?>"><i class="fa fa-edit btn btn-info"></i></a>
         <?php echo anchor('history_tran/hapus/'.$value->id_daftar_kebutuhan,'<i class="fa fa-trash btn btn-danger" aria-hidden="true"></i>'); ?>
       </td>
     </tr>
@@ -85,11 +103,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </tbody>
 </table>
 </form>
-	
-	</div>
-</div>
-
-
 
 </body>
 </html>

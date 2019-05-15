@@ -10,6 +10,11 @@ class history_sim extends CI_Controller {
 	public function index()
 	{
 		$data['data'] = $this->Input_simpan_model->join_data();
+
+		if($this->input->post('keyword') ){
+			$data['data'] = $this->Input_simpan_model->cari_data('anggota');
+		}
+
 		$this->load->view('history_simpan', $data);
 
 	}

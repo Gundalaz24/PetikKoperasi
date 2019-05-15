@@ -25,6 +25,15 @@ class Input_simpan_model extends CI_Model {
         {
                 $this->db->delete('simpan_uang', array('id_simpan' => $id)); 
         }
+        public function cari_data(){
+                $keyword = $this->input->post('keyword', true);
+                $this->db->or_like('nama_anggota', $keyword);
+                $this->db->select('*');
+                $this->db->from('simpan_uang');
+                $this->db->join('anggota','simpan_uang.anggota_id = anggota.id_anggota');
+                $query = $this->db->get();
+                return $query->result();
+        }
 
 }
 ?>

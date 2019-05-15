@@ -17,18 +17,16 @@ class input_sim extends CI_Controller {
 		// tambah data
 		$this->form_validation->set_rules('anggota','Anggota','required');
 		$this->form_validation->set_rules('jumlah','Jumlah','required|numeric');	
-		$this->form_validation->set_rules('tanggal','Tanggal Belanja','required');
 
 		if($this->form_validation->run() != false){
 				
 				$anggota_id = $this->input->POST('anggota', true);
                 $jumlah = $this->input->POST('jumlah', true);
-                $tanggal = $this->input->POST('tanggal', true);
 
                 $data = [
                 'anggota_id' => $anggota_id,
                 'jumlah' => $jumlah,
-                'tanggal' => $tanggal
+                'tanggal' => date("Y/m/d")
                 ];
 
 			$this->Input_simpan_model->tambahData($data);

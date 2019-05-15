@@ -1,147 +1,247 @@
 /*font*/
-@font-face{
-	font-family: 'bellerose';
-	src: url('../fonts/Bellerose.ttf') format('truetype');
-}
-@font-face{
-	font-family: 'opera';
-	src: url('../fonts/Opera-Demo.otf') format('truetype');
+
+@font-face {
+    font-family: 'bellerose';
+    src: url('../fonts/Bellerose.ttf') format('truetype');
 }
 
-*{
-	box-sizing: border-box;
+@font-face {
+    font-family: 'opera';
+    src: url('../fonts/Opera-Demo.otf') format('truetype');
 }
-.headerLogo{
-	background-color: #4E7FA4;
-	vertical-align: middle;
-	display: inline-block;
+
+* {
+    box-sizing: border-box;
 }
-.logoo{
-	max-width: 20%;
-	max-height: auto;
-	padding: 10px;
-	margin-left: 40px;
+
+.headerLogo {
+    background-color: #4E7FA4;
+    vertical-align: middle;
+    display: inline-block;
 }
+
+.logoo {
+    max-width: 20%;
+    max-height: auto;
+    padding: 10px;
+    margin-left: 40px;
+}
+
 
 /*sidebar*/
+
 .sidebar {
-  height:161.8%;
-  width: 250px;
-  background-color: #304249;
-  padding-top: 50px;
-  overflow: auto;
+    height: 161.8%;
+    width: 250px;
+    background-color: #304249;
+    padding-top: 50px;
+    overflow: auto;
 }
 
-.col-md-2{
-	margin-left: -15px;
+.col-md-2 {
+    margin-left: -15px;
 }
+
 .sidebar a {
-  display: block;
-  font-family: opera;
-  color: white;
-  padding: 16px;
-  font-size: 25px;
-  padding: 3px 8px 8px 22px;
-  text-decoration: none;
+    display: block;
+    font-family: opera;
+    color: white;
+    padding: 16px;
+    font-size: 25px;
+    padding: 3px 8px 8px 22px;
+    text-decoration: none;
 }
- 
+
 .sidebar a.active {
-  background-color: #4CAF50;
-  color: white;
+    background-color: #4CAF50;
+    color: white;
 }
 
 .sidebar a:hover {
-  color: tomato;
+    color: tomato;
 }
-li{
-	color: white;
-	font-size: 20px;
-	margin-left: 10px;
+
+li {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
 }
-li:hover{
-	color: tomato;
+
+li:hover {
+    color: tomato;
 }
-.active{
-	color: tomato;
+
+.active {
+    color: tomato;
 }
-.active a{
-	color: tomato;
+
+.active a {
+    color: tomato;
 }
 
 div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
 }
 
 @media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {
+        float: left;
+    }
+    div.content {
+        margin-left: 0;
+    }
 }
 
+
 /*form*/
-form{
-	max-height: 100%;
-	width: 70%;
-	margin-top: 40px;
-	margin-left: 60px;
+
+form {
+    max-height: 100%;
+    width: 70%;
+    margin-top: 40px;
+    margin-left: 60px;
 }
-h1{
-	font-family: opera;
-	color: #304249;
+
+h1 {
+    font-family: opera;
+    color: #304249;
 }
-.headtab{
-	background-color: #304249;
-	color: white;
+
+.headtab {
+    background-color: #304249;
+    color: white;
 }
-.btn{
-	background-color: #304249;
-	color: white;
+
+.btn {
+    background-color: #304249;
+    color: white;
 }
-.btn:hover{color: tomato;}
+
+.btn:hover {
+    color: tomato;
+}
+
+h5 {
+    margin-left: 10px;
+    font-size: 30px;
+    font-family: opera;
+}
+
+.modal-body {
+    margin-top: -25px;
+}
+
+
 /*responsive*/
-@media screen and (max-width: 1300px){
-	form{margin-left: 170px;}
-	.logoo{max-width: 30%; min-width: 30%;}	
-	form{margin-left:100px;width: 60%;}
+
+@media screen and (max-width: 1300px) {
+    form {
+        margin-left: 170px;
+    }
+    .logoo {
+        max-width: 30%;
+        min-width: 30%;
+    }
+    form {
+        margin-left: 100px;
+        width: 60%;
+    }
 }
-@media screen and (max-width: 1024px){
-	form{margin-left: 200px;}
-	.logoo{max-width: 40%; min-width: 40%;}
-	form{margin-left:130px;width: 65%;}
+
+@media screen and (max-width: 1024px) {
+    form {
+        margin-left: 200px;
+    }
+    .logoo {
+        max-width: 40%;
+        min-width: 40%;
+    }
+    form {
+        margin-left: 130px;
+        width: 65%;
+    }
 }
-@media screen and  (max-width: 992px){
-  .logoo{max-width: 40%; min-width: 40%;}
-  .sidenav a {font-size: 20px;margin-left: -15px;}
-  h1{font-size: 40px;}
-  form{margin-left: 150px;margin-top: 40px;font-size: 15px;}
+
+@media screen and (max-width: 992px) {
+    .logoo {
+        max-width: 40%;
+        min-width: 40%;
+    }
+    .sidenav a {
+        font-size: 20px;
+        margin-left: -15px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    form {
+        margin-left: 150px;
+        margin-top: 40px;
+        font-size: 15px;
+    }
 }
+
 @media screen and (max-width: 768px) {
-  .logoo{max-width: 50%;margin-left: 170px;}
-  .sidebar{width: 696px;padding-top: 20px;}
-  .sidebar a {
-    text-align: center;
-    float: none;
-    margin-left: -50px;
-  }
-  h1{font-size: 40px;text-align: center;}
-  form{margin-left:0px;margin-top: 40px;width: 100%;}
-  table{width: 80%;font-size: 10px;}
+    .logoo {
+        max-width: 50%;
+        margin-left: 170px;
+    }
+    .sidebar {
+        width: 696px;
+        padding-top: 20px;
+    }
+    .sidebar a {
+        text-align: center;
+        float: none;
+        margin-left: -50px;
+    }
+    h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    form {
+        margin-left: 0px;
+        margin-top: 40px;
+        width: 100%;
+    }
+    table {
+        width: 80%;
+        font-size: 10px;
+    }
 }
+
 @media only screen and (max-width: 480px) {
-  .logoo{max-width: 60%;margin-left: 90px;}
-  .sidebar{width: 620px;padding-top: 20px;}
-  .sidebar a {
-    text-align: center;
-    float: none;
-    margin-left: -200px;
-  }
-  h1{font-size: 40px;text-align: center;}
-  form{margin-left:0px;margin-top: 40px;width: 100%;}
-  table{width: 80%;font-size: 10px;}
+    .logoo {
+        max-width: 60%;
+        margin-left: 90px;
+    }
+    .sidebar {
+        width: 620px;
+        padding-top: 20px;
+    }
+    .sidebar a {
+        text-align: center;
+        float: none;
+        margin-left: -200px;
+    }
+    h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    form {
+        margin-left: 0px;
+        margin-top: 40px;
+        width: 100%;
+    }
+    table {
+        width: 80%;
+        font-size: 10px;
+    }
 }

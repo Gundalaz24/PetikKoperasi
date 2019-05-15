@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>Koperasi PeTIK</title>
 	<!-- boostrap link -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/css/input_pinjam.css")?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/css/input_simpan.css")?>">
 	<!-- icon -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- js link -->
@@ -77,12 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="form-group">
     <label for="exampleFormControlInput1">Jumlah Investasi</label>
     <input type="text" class="form-control" name="jumlah" placeholder="Rp. 0">  
-  </div>
-   <div class="form-group">
-    <label class="control-label" for="date">Tanggal Belanja</label>
-      <input type="date" name="tanggal" class="form-control"
-      placeholder="yyyy-mm-dd">
-  </div>   
+  </div>  
   <div class="form-group"> 
       <button class="btn" name="tambah" type="submit">Input</button>
    </div>

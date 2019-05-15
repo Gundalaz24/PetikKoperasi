@@ -47,13 +47,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <!-- content -->
 
-<form method="POST" action="<?php base_url();?>input_bel">
-<h1>EDIT BELANJA</h1>
-<?php if (validation_errors() ) : ?>
-  <div class="alert alert-danger" role="alert">
- <?php echo validation_errors() ?>
-</div>
-<?php endif; ?>
+<form method="POST" action="<?php base_url();?>history_bel/ubah">
+<h1>EDIT Data BELANJA</h1>
 
 <?php if($this->session->flashdata('flash') ) : ?>
   <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -66,35 +61,59 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?php endif; ?>
 
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Jenis Barang</label>
-    <select class="form-control" name="barang_id">
-      <option  disabled selected>Pilih Barang</option>
-      <?php foreach($data as $value){ ?>
-      <option>
-        <?php echo $value->nama_barang ?>
-      </option>
-      <?php } ?>
-    </select>
+  <input type="hidden" class="form-control" name="id_belanja" value="<?= $datax['id_belanja']?>">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Jumlah</label>
-    <input type="text" class="form-control" name="jumlah">  
-  </div>
-   <div class="form-group">
-    <label class="control-label" for="date">Tanggal Belanja</label>
-      <input type="date" name="tanggal" class="form-control"
-      placeholder="yyyy-mm-dd">
-  </div>   
+  <label for="jenis_barang">Barang</label>
+  <select class="form-control" name="jenis_barang" id="jenis_barang">
+  </select>
+  <small class="form-text text-danger"><?= form_error('jenis_barang');?></small>
+  </div>  
   <div class="form-group">
-    <label for="exampleFormControlInput1">Total Belanja</label>
-    <input type="text" class="form-control" name="total_belanja" readonly
-    value="">
+  <label for="harga_barang">Harga</label>
+  <input type="text" class="form-control" name="harga_barang" id="harga_barang" readonly>
+  </div>
+  <div class="form-group">
+  <label for="jumlah_barang">Jumlah</label>
+  <input type="text" class="form-control" name="jumlah_barang" id="jumlah_barang" value=""  placeholder="masukan jumlah barang yang ingin dibeli">
+  <small class="form-text text-danger"><?= form_error('jumlah_barang');?></small>
+  </div>
+  <div class="form-group">
+  <label for="total_belanja">Total belanja</label>
+  <input type="text" class="form-control" name="total_belanja" id="total_belanja" readonly>
   </div>
   <div class="form-group"> 
-      <button class="btn" name="tambah" type="submit">Input</button>
+      <button class="btn" name="ubah" type="submit">Ubah</button>
    </div>
 </form>
   
+<script type="text/javascript"> 
+      var string = "";
+      var result = <?php echo $data_barang ?>;
+      // console.log(result);
+        
+      var jenis_barang = document.getElementById("jenis_barang");
+      var harga_barang = document.getElementById("harga_barang");
+      var jumlah_barang = document.getElementById("jumlah_barang");
+      var total_belanja = document.getElementById("total_belanja");
+
+      string += "<option disabled selected> Pilih Barang </option>";
+
+      for(value in result){
+        string += "<option>"+ result[value].nama_barang +"</option>";
+      }
+      
+      jenis_barang.innerHTML = string;
+      
+      jenis_barang.addEventListener('change', (event) => {
+        harga_barang.value = result[jenis_barang.selectedIndex-1].harga_barang;
+      });
+
+      jumlah_barang.addEventListener('change', (event) =>{
+        total_belanja.value = jumlah_barang.value * harga_barang.value;
+      });
+        
+  </script>
   </div>
 </div>
 

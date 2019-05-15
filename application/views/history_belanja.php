@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 
 <!-- content -->
-<form>
+<form action="" method="POST">
 <h1>HISTORY BELANJA</h1>
 <?php if($this->session->flashdata('flash') ) : ?>
   <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -60,6 +60,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </button>
   </div>
 <?php endif; ?>
+
+  <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Cari Data Transaksi Berdasarkan Produk" name="keyword">
+  <div class="input-group-append">
+    <button class="btn btn" type="submit">Cari</button>
+  </div>
+  </div>
 
   <table class="table table-hover">
   <thead>
@@ -82,7 +89,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <td><?php echo $value->jumlah ?></td>
       <td><?php echo $value->total_belanja ?></td>
       <td class="aksi">
-        <a href="<?php echo base_url() ?>history_bel/edit" class="fa fa-edit btn btn-info"></a>
+      <a href="<?= base_url()?>history_bel/ubah/<?= $value->id_belanja?>"><i class="fa fa-edit btn btn-info"></i></a>
         <?php echo anchor('history_bel/hapus/'.$value->id_belanja,'<i class="fa fa-trash btn btn-danger" aria-hidden="true"></i>'); ?>
       </td>
     </tr>

@@ -47,5 +47,6 @@ class input_tran extends CI_Controller {
 			$this->load->view('input_transaksi', $data);
 		}
 	}
+
 }
 

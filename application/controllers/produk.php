@@ -23,6 +23,10 @@ class produk extends CI_Controller {
 		$this->load->model('Produk_model');
 		$data['data'] = $this->Produk_model->ambil_data();
 
+		if($this->input->post('keyword') ){
+			$data['data'] = $this->Produk_model->cari_data('barang');
+		}
+
 		$this->load->view('lihat_produk', $data);
 	}
 }

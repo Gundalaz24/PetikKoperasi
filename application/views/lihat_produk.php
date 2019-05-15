@@ -49,8 +49,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 
 <!-- content -->
-<form>
+<form action="" method="POST">
 <h1>HISTORY PRODUK</h1>
+
+  <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Cari Data Transaksi Berdasarkan Produk atau Harga Barang" name="keyword">
+  <div class="input-group-append">
+    <button class="btn btn" type="submit">Cari</button>
+  </div>
+  </div>
+
   <table class="table table-hover">
   <thead>
     <tr class="headtab">
